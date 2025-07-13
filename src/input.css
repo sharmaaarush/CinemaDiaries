@@ -2,21 +2,27 @@
 
 @layer components {
   .cinema-card-container {
-    @apply grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 sm:gap-2 md:gap-2 lg:gap-4 xl:gap-4
+    @apply grid
+         grid-cols-1        /* 1 col on <640px */
+         sm:grid-cols-2     /* 2 cols ≥640px */
+         md:grid-cols-3     /* 3 cols ≥768px */
+         lg:grid-cols-4     /* 4 cols ≥1024px */
+         xl:grid-cols-5     /* 5 cols ≥1280px */
+         gap-2 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-10;
   }
   .cinema-card {
     @apply bg-[#393E46] flex flex-col items-center rounded-xl m-[20px] p-[10px] w-[250px] transition-all duration-[300ms] ease-in-out hover:shadow-lg hover:shadow-amber-50 hover:delay-[2ms] hover:scale-105;
   }
   .cinema-card-title {
-    @apply text-[#F4EBD3] text-xl font-mono font-bold
+    @apply text-[#F4EBD3] text-xl font-mono font-bold;
   }
   .cinema-card-divider {
-    @apply w-[225px] mx-auto border-t-2 border-[#948979] mt-[5px]
+    @apply w-[225px] mx-auto border-t-2 border-[#948979] mt-[5px];
   }
   .cinema-card-image {
-    @apply w-[200px] rounded-xl mt-[15px] mb-[15px]
+    @apply w-[200px] rounded-xl mt-[15px] mb-[15px];
   }
   .cinema-card-description {
-    @apply rounded-[7px] text-black bg-[#526D82] p-[5px] text-center
+    @apply rounded-[7px] text-black bg-[#526D82] p-[5px] text-center;
   }
 }

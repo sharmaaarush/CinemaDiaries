@@ -3,12 +3,12 @@
 @layer components {
   .cinema-card-container {
     @apply grid
-         grid-cols-1        /* 1 col on <640px */
-         sm:grid-cols-2     /* 2 cols ≥640px */
-         md:grid-cols-3     /* 3 cols ≥768px */
-         lg:grid-cols-4     /* 4 cols ≥1024px */
-         xl:grid-cols-5     /* 5 cols ≥1280px */
-         gap-2 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-10;
+           grid-cols-1
+           sm:grid-cols-1
+           md:grid-cols-3
+           lg:grid-cols-4
+           xl:grid-cols-5
+           gap-4;
   }
   .cinema-card {
     @apply bg-[#393E46] flex flex-col items-center rounded-xl m-[20px] p-[10px] w-[250px] transition-all duration-[300ms] ease-in-out hover:shadow-lg hover:shadow-amber-50 hover:delay-[2ms] hover:scale-105;
